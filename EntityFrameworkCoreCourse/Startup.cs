@@ -35,7 +35,7 @@ namespace EntityFrameworkCoreCourse
             services.AddScoped<IApplicationDbContext>(provider => provider.GetService<ApplicationDbContext>());
 
             //Swagger
-            services.AddSwaggerGen(c =>
+            /*services.AddSwaggerGen(c =>
             {
                 c.IncludeXmlComments(string.Format(@"{0}\EFCore.CodeFirst.WebApi.xml", System.AppDomain.CurrentDomain.BaseDirectory));
                 c.SwaggerDoc("v1", new OpenApiInfo
@@ -43,7 +43,7 @@ namespace EntityFrameworkCoreCourse
                     Version = "v1",
                     Title = "EFCore.CodeFirst.WebApi"
                 });
-            });
+            });*/
 
             services.AddControllers();
         }
@@ -56,14 +56,14 @@ namespace EntityFrameworkCoreCourse
             }
 
             // Enable middleware to serve generated Swagger as a JSON endpoint.
-            app.UseSwagger();
+            //app.UseSwagger();
 
             // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
             // specifying the Swagger JSON endpoint.
-            app.UseSwaggerUI(c =>
+            /*app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "EFCore.CodeFirst.WebApi");
-            });
+            });*/
 
             app.UseHttpsRedirection();
 
