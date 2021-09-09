@@ -1,10 +1,7 @@
 ﻿using EntityFrameworkCoreCourse.Contexts;
 using EntityFrameworkCoreCourse.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -65,7 +62,7 @@ namespace EntityFrameworkCoreCourse.Controllers
                 student.Age = studentUpdate.Age;
                 student.Name = studentUpdate.Name;
                 await _context.SaveChanges();
-                return Ok(studentUpdate.Id);
+                return Ok(student.Id);
             }
         }
     }
